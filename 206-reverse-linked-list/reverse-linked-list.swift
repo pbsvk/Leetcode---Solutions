@@ -12,10 +12,10 @@ class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
         var prev: ListNode? = nil
         var current = head
-        while let node = current {
-            let nextNode = node.next
-            node.next = prev
-            prev = node
+        while current != nil {
+            let nextNode = current?.next
+            current?.next = prev
+            prev = current
             current = nextNode
         }
         return prev 
