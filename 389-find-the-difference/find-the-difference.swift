@@ -1,8 +1,14 @@
 class Solution {
     func findTheDifference(_ s: String, _ t: String) -> Character {
-        Character(UnicodeScalar(t.unicodeScalars.reduce(0) 
-        { $0 ^ Int($1.value) } ^ s.unicodeScalars.reduce(0) 
-        { $0 ^ Int($1.value) }
-        )!)
+        var result = 0
+
+        for char in s.unicodeScalars {
+            result ^= Int(char.value)
+        }
+        for char in t.unicodeScalars {
+            result ^= Int(char.value)
+        }
+
+        return Character(UnicodeScalar(result)!)
     }
 }
