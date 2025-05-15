@@ -4,5 +4,6 @@ class Solution {
             nums1[j] = nums2[index]
         }
         nums1.sort()
+        
     }
 }
