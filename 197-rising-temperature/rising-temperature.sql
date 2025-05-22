@@ -1,5 +1,5 @@
 -- Write your PostgreSQL query statement below
-SELECT today.id 
+SELECT TODAY.id 
 FROM Weather yesterday
 CROSS JOIN Weather today
 WHERE today.recordDate - yesterday.recordDate = 1
