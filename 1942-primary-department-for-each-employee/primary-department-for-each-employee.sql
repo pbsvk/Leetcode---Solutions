@@ -1,6 +1,6 @@
 -- Write your PostgreSQL query statement below
 SELECT employee_id, department_id 
-FROM EMPLOYEE 
+FROM employee 
 WHERE employee_id 
 IN 
 (
