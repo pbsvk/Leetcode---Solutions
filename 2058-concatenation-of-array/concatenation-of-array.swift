@@ -1,5 +1,5 @@
 class Solution {
     func getConcatenation(_ nums: [Int]) -> [Int] {
-        nums+nums
+         Array(chain(nums,nums))
     }
 }
