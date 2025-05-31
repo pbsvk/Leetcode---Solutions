@@ -2,7 +2,7 @@
 SELECT 
     p.product_id,
     CASE
-        WHEN SUM(u.units) is null
+        WHEN SUM(u.UNITS) is null
         THEN 0
         ELSE
             ROUND(SUM(u.units * p.price) / SUM(u.units)::numeric, 2)
