@@ -1,0 +1,6 @@
+// Title: Concatenation of Array
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/concatenation-of-array/
+
+c
