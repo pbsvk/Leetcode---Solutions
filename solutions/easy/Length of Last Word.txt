@@ -1,0 +1,14 @@
+// Title: Length of Last Word
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/length-of-last-word/
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        i = 0
+        for ch in reversed(s):
+            if ch != " ":
+                i += 1
+            elif i > 0:
+                return i
+        return i
