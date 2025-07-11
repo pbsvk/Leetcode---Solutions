@@ -1,0 +1,20 @@
+// Title: Delete Node in a BST
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/delete-node-in-a-bst/
+
+            return None
+        if key > root.val:
+            root.right = self.deleteNode(root.right, key)
+        elif key < root.val:
+            root.left = self.deleteNode(root.left, key)
+        else:
+            if not root.right:
+                return root.left
+            if not root.left:
+                return root.right
+            else:
+                minNode = self.minValueNode(root.right)
+                root.val = minNode.val
+                root.right = self.deleteNode(root.right, minNode.val)
+        return root
