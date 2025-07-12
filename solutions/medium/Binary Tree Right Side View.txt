@@ -1,0 +1,25 @@
+// Title: Binary Tree Right Side View
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/binary-tree-right-side-view/
+
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        res = []
+        q = collections.deque()
+        q.append(root)
+        while q:
+            qlen = len(q)
+            level = []
+            for i in range(qlen):
+                node = q.popleft()
+                    q.append(node.left)
+                    q.append(node.right)
+            if level:
+                    level.append(node.val)
+                if node:
+                res.append(level[-1])
+        return res
