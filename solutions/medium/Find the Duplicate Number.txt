@@ -1,0 +1,16 @@
+// Title: Find the Duplicate Number
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-the-duplicate-number/
+
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        counter = {}
+        for num in nums:
+            if num not in counter:
+                counter[num] = 1
+            else:
+                counter[num] += 1
+        for key, value in counter.items():
+            if value > 1:
+                return key 
