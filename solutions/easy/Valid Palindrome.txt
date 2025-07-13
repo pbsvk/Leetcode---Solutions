@@ -1,0 +1,19 @@
+// Title: Valid Palindrome
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/valid-palindrome/
+
+        while L < R:
+        R = len(s) - 1
+        L = 0
+        s = clean_string(s)
+    def isPalindrome(self, s: str) -> bool:
+·‌·‌·‌·‌return·‌s
+
+class Solution:
+·‌·‌·‌·‌s·‌=·‌re.sub(r'[^a-z0-9]',·‌'',·‌s)
+·‌·‌·‌·‌#·‌Remove·‌non-alphanumeric·‌characters
+·‌·‌·‌·‌s·‌=·‌s.lower()
+    #·‌Convert·‌to·‌lowercase
+def clean_string(s: str) -> str:
+import re
